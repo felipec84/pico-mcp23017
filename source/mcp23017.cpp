@@ -117,6 +117,10 @@ int Mcp23017::get_interrupt_values() const {
 	return read_dual_registers(MCP23017_INTCAPA); //will include MCP23017_INTCAPB
 }
 
+int Mcp23017::get_gpio_values() const {
+	return read_dual_registers(MCP23017_GPIOA); //will include MCP23017_GPIOB
+}
+
 int Mcp23017::update_and_get_input_values() {
 	int result = read_dual_registers(MCP23017_GPIOA); //will include MCP23017_GPIOB
 	if (result != PICO_ERROR_GENERIC) {

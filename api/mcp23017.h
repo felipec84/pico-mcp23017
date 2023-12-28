@@ -66,7 +66,11 @@ public:
 	 * @return values or PICO_ERROR_GENERIC
 	 */
 	int get_interrupt_values() const;
-
+	/**
+	 * Get the port register without using IRQ
+	 * @return values or PICO_ERROR_GENERIC
+	 */
+	int get_gpio_values() const;
 	/**
 	 * Stores and returns the last input state in the class for later interrogation with
 	 * get_last_input_pin_value or get_last_input_pin_values
