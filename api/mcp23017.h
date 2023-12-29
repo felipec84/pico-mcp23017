@@ -72,6 +72,11 @@ public:
 	 */
 	int get_gpio_values() const;
 	/**
+	 * Get the signals that produced the IRQ
+	 * @return values of MCP23017_INTFA/MCP23017_INTFB or PICO_ERROR_GENERIC
+	*/
+	int get_last_interrupt_values() const;
+	/**
 	 * Stores and returns the last input state in the class for later interrogation with
 	 * get_last_input_pin_value or get_last_input_pin_values
 	 * @return the pin values or PICO_ERROR_NONE or PICO_ERROR_GENERIC
